@@ -1,0 +1,60 @@
+---
+import TechnologiesItem from "./TechnologiesItem.astro";
+
+const TECH = [
+  {
+    title: "Git y GitHub",
+    knowledge: "Certificado con Oracle.",
+    description:
+      "Manejo avanzado de control de versiones con Git, optimización de flujos de trabajo en GitHub y colaboración en proyectos mediante ramas, pull requests e integraciones.",
+    link: "https://app.aluracursos.com/certificate/c314193c-3e2e-48cc-ad69-5bceb5d93953",
+  },
+  {
+    title: "Java y JPA",
+    knowledge: "Certificado con Oracle.",
+    description:
+      "Desarrollo de aplicaciones Back-End robustas con Java y JPA, optimización de consultas a Bases de Datos, modelado eficiente de entidades y mejora del rendimiento en sistemas empresariales.",
+    link: "https://app.aluracursos.com/certificate/a3126fe8-b843-465f-9d71-9a070a51871d",
+  },
+  {
+    title: "JavaScript",
+    knowledge: "Certificado con Oracle y Alura Latam.",
+    description:
+      "Dominio de conceptos intermedios y avanzados de JavaScript, incluyendo asincronía, manipulación del DOM, integración con APIs y desarrollo de aplicaciones dinámicas.",
+  },
+  {
+    title: "React Native con Expo",
+    knowledge: "Autodidacta.",
+    description:
+      "Desarrollo de aplicaciones móviles multiplataforma con React Native y Expo, aprovechando componentes reutilizables y optimización de rendimiento en Android y iOS.",
+  },
+  {
+    title: "Tailwind CSS",
+    knowledge: "Autodidacta.",
+    description:
+      "Creación de interfaces modernas y responsivas con Tailwind CSS, aplicando un enfoque utility-first para el desarrollo eficiente y estilizado de aplicaciones web.",
+  },
+  {
+    title: "Bootstrap",
+    knowledge: "Conocimientos avanzados con la UCR.",
+    description:
+      "Desarrollo ágil de sitios web responsivos con Bootstrap, utilizando su sistema de grid, componentes predefinidos y personalización avanzada con SASS.",
+  },
+  {
+    title: "Python",
+    knowledge: "Autodidacta.",
+    description:
+      "Desarrollo de scripts automatizados, aplicaciones de consola y APIs con Flask, aplicando buenas prácticas de programación y manejo de datos.",
+  },
+];
+---
+
+<ol class="">
+  {
+    TECH.map((tech) => (
+      <li class="ms-2">
+        <TechnologiesItem {...tech} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,87 @@
+---
+import AboutMe from "../components/AboutMe.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Technologies from "../components/Technologies.astro";
+
+import GitHubIcon from "../icons/GitHub.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro";
+import Tech from "../icons/Tech.astro";
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="px-4">
+    <SectionContainer class="py-28 pt-30">
+      <div class="flex gap-4 mb-4">
+        <img
+          class="rounded-full shadow-lg size-16"
+          src="https://avatars.githubusercontent.com/u/131091082?v=4"
+          alt="George Cortés"
+        />
+        <a
+          href="https://www.linkedin.com/in/george-cort%C3%A9s-jim%C3%A9nez-306700272/"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center transition md:justify-center md:hover:scale-105"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </div>
+
+      <h1
+        class="text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4"
+      >
+        Hey, soy George
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        <span class="text-yellow-200">+2 años de experiencia.</span> Soy programador
+        con conocimientos en Desarrollo Web, Móvil y Back-End.
+        <span class="text-red-200">
+          Ofrezco soluciones tecnologicas eficientes y escalables.
+        </span>
+        <br /> Si buscas a alguien con ganas de crecer, aprender y aportar valor
+        a tu equipo <span class="text-blue-200">
+          ¡No dudes en contactarme!
+        </span>
+      </h2>
+
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://www.linkedin.com/in/george-cort%C3%A9s-jim%C3%A9nez-306700272/"
+        >
+          <LinkedInIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/GeorgeCortesJ">
+          <GitHubIcon class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:george72001@gmail.com">
+          <MailIcon class="size-6" />
+          george72001@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="tech">
+      <h2 class="text-4xl font-semibold mb-4 flex gap-x-3 items-center">
+        <Tech class="size-10" />
+        Tecnologías
+      </h2>
+      <Technologies />
+    </SectionContainer>
+
+    <SectionContainer class="py-20" id="about">
+      <h2 class="text-4xl font-semibold mb-4 flex gap-x-3 items-center">
+        <ProfileCheck class="size-10" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>
