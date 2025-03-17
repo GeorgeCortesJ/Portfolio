@@ -1,55 +1,174 @@
 ---
-const { title, knowledge, description, link } = Astro.props;
+import SubTitle from "./SubTitle.astro";
+import Title from "./Title.astro";
+import Text from "./Text.astro";
 ---
 
-<div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+<main
+  class="grid grid-cols-1 gap-4 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5"
 >
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
-        >&bull;</span
-      >
-    </div>
-
-    <span class="mb-1 text-sm font-normal leading-none text-yellow-200"
-      >{knowledge}</span
-    >
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-      {title}
-    </h3>
-  </div>
-
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
-  >
-    <p class="mb-4 text-base font-normal text-gray-200">
-      {description}
-    </p>
-    {
-      link && (
+  <section id="git" class="border rounded p-2 md:col-span-2 lg:col-span-2">
+    <div class="flex gap-2">
+      <div class="w-[500px]">
+        <SubTitle>Certificado con Oracle.</SubTitle>
+        <Title>Git y GitHub</Title>
+      </div>
+      <div class="gap-2">
+        <Text>
+          Manejo avanzado de control de versiones con Git, optimización de
+          flujos de trabajo en GitHub y colaboración en proyectos mediante
+          ramas, pull requests e integraciones.
+        </Text>
         <a
-          href={link}
+          href="https://app.aluracursos.com/certificate/c314193c-3e2e-48cc-ad69-5bceb5d93953"
           class="inline-flex items-center px-4 py-2 text-sm w-40 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-        >
-          Saber más{" "}
-          <svg
+          >Saber más <svg
             class="w-3 h-3 ms-2 rtl:rotate-180"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 14 10"
-          >
-            <path
+            ><path
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </a>
-      )
-    }
-  </div>
-</div>
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path></svg
+          ></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="java"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
+  >
+    <div>
+      <div class="mb-16">
+        <SubTitle>Certificado con Oracle.</SubTitle>
+        <Title>Java y JPA</Title>
+      </div>
+      <div>
+        <Text>
+          Desarrollo de aplicaciones Back-End robustas con Java y JPA,
+          optimización de consultas a Bases de Datos, modelado eficiente de
+          entidades y mejora del rendimiento en sistemas empresariales.
+        </Text>
+        <a
+          href="https://app.aluracursos.com/certificate/a3126fe8-b843-465f-9d71-9a070a51871d"
+          class="inline-flex items-center px-4 py-2 text-sm w-40 font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          >Saber más <svg
+            class="w-3 h-3 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+            ><path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path></svg
+          ></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="react"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
+  >
+    <div class="mb-14">
+      <SubTitle>Autodidacta.</SubTitle>
+      <Title>React Native con Expo</Title>
+    </div>
+    <div>
+      <Text>
+        Desarrollo de aplicaciones móviles multiplataforma con React Native y
+        Expo, aprovechando componentes reutilizables y optimización de
+        rendimiento en Android y iOS.
+      </Text>
+    </div>
+  </section>
+
+  <section
+    id="cs"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-1"
+  >
+    <div class="mb-6">
+      <SubTitle>Conocimientos avanzados con la UCR.</SubTitle>
+      <Title>C# ASP.NET Core</Title>
+    </div>
+    <div>
+      <Text
+        >Desarrollo de aplicaciones de Escritorio, Web y Móviles con ASP.NET</Text
+      >
+    </div>
+  </section>
+
+  <section
+    id="js"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
+  >
+    <div class="mb-16">
+      <SubTitle>Certificado con Oracle y Alura Latam.</SubTitle>
+      <Title>JavaScript</Title>
+    </div>
+    <div>
+      <Text>
+        Dominio de conceptos intermedios y avanzados de JavaScript, incluyendo
+        asincronía, manipulación del DOM, integración con APIs y desarrollo de
+        aplicaciones dinámicas.
+      </Text>
+    </div>
+  </section>
+
+  <section
+    id="tailwind"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
+  >
+    <div class="mb-16">
+      <SubTitle>Autodidacta.</SubTitle>
+      <Title>TailwindCSS</Title>
+    </div>
+    <div>
+      <Text>
+        Creación de interfaces modernas y responsivas con Tailwind CSS,
+        aplicando un enfoque utility-first para el desarrollo eficiente y
+        estilizado de aplicaciones web.
+      </Text>
+    </div>
+  </section>
+
+  <section
+    id="b5"
+    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
+  >
+    <div class="mb-16">
+      <SubTitle>Conocimientos avanzados con la UCR.</SubTitle>
+      <Title>Bootstrap</Title>
+    </div>
+    <div>
+      <Text>
+        Desarrollo ágil de sitios web responsivos con Bootstrap, utilizando su
+        sistema de grid, componentes predefinidos y personalización avanzada con
+        SASS.
+      </Text>
+    </div>
+  </section>
+
+  <section id="py" class="border rounded p-2 md:col-span-2 lg:col-span-2">
+    <div class="mb-4">
+      <SubTitle>Autodidacta.</SubTitle>
+      <Title>Python</Title>
+    </div>
+    <div>
+      <Text>
+        Desarrollo de scripts automatizados, aplicaciones de consola y APIs con
+        Flask, aplicando buenas prácticas de programación y manejo de datos.
+      </Text>
+    </div>
+  </section>
+</main>

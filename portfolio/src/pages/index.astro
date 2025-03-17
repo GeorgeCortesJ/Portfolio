@@ -3,7 +3,7 @@ import AboutMe from "../components/AboutMe.astro";
 import Badge from "../components/Badge.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import SocialPill from "../components/SocialPill.astro";
-import Technologies from "../components/Technologies.astro";
+import TechnologiesItem from "../components/TechnologiesItem.astro";
 
 import GitHubIcon from "../icons/GitHub.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
@@ -68,12 +68,12 @@ import Layout from "../layouts/Layout.astro";
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="tech">
+    <SectionContainer id="tech" class="h-auto">
       <h2 class="text-4xl font-semibold mb-4 flex gap-x-3 items-center">
         <Tech class="size-10" />
         Tecnologías
       </h2>
-      <Technologies />
+      <TechnologiesItem />
     </SectionContainer>
 
     <SectionContainer class="py-20" id="about">
