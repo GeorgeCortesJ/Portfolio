@@ -2,6 +2,8 @@
 const { class: className } = Astro.props;
 ---
 
-<section class={`border rounded p-2 ${className}`}>
+<section
+  class={`bg-indigo-500/10 rounded-2xl p-2 hover:scale-101 hover:shadow-2xl hover:shadow-gray-100/15 ${className}`}
+>
   <slot />
 </section>
