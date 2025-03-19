@@ -2,16 +2,31 @@
 import SubTitle from "./SubTitle.astro";
 import Title from "./Title.astro";
 import Text from "./Text.astro";
+import SectionTech from "./SectionTech.astro";
+
+import GitHubIcon from "../icons/GitHub.astro";
+import GitIcon from "../icons/GitIcon.astro";
+import ReactIcon from "../icons/ReactIcon.astro";
+import ExpoIcon from "../icons/ExpoIcon.astro";
+import JavaIcon from "../icons/JavaIcon.astro";
+import CSIcon from "../icons/CSIcon.astro";
+import JSIcon from "../icons/JSIcon.astro";
+import TailwindIcon from "../icons/TailwindIcon.astro";
+import BootsIcon from "../icons/BootsIcon.astro";
+import PythonIcon from "../icons/PythonIcon.astro";
+import FlaskIcon from "../icons/FlaskIcon.astro";
 ---
 
-<main
-  class="grid grid-cols-1 gap-4 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-5"
->
-  <section id="git" class="border rounded p-2 md:col-span-2 lg:col-span-2">
+<main class="mt-6 grid grid-cols-3 gap-2">
+  <SectionTech class="col-span-2 row-span-1">
     <div class="flex gap-2">
       <div class="w-[500px]">
         <SubTitle>Certificado con Oracle.</SubTitle>
         <Title>Git y GitHub</Title>
+        <div class="flex gap-8 mt-4 ml-4">
+          <GitIcon class="size-6" />
+          <GitHubIcon class="size-6" />
+        </div>
       </div>
       <div class="gap-2">
         <Text>
@@ -38,16 +53,16 @@ import Text from "./Text.astro";
         >
       </div>
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="java"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
-  >
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-2">
     <div>
-      <div class="mb-16">
+      <div class="mb-10">
         <SubTitle>Certificado con Oracle.</SubTitle>
         <Title>Java y JPA</Title>
+        <div class="mt-4 ml-4">
+          <JavaIcon class="size-6" />
+        </div>
       </div>
       <div>
         <Text>
@@ -74,15 +89,16 @@ import Text from "./Text.astro";
         >
       </div>
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="react"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
-  >
-    <div class="mb-14">
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div class="mb-10">
       <SubTitle>Autodidacta.</SubTitle>
       <Title>React Native con Expo</Title>
+      <div class="flex gap-8 mt-4 ml-4">
+        <ReactIcon class="size-6" />
+        <ExpoIcon class="size-6" />
+      </div>
     </div>
     <div>
       <Text>
@@ -91,30 +107,30 @@ import Text from "./Text.astro";
         rendimiento en Android y iOS.
       </Text>
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="cs"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-1"
-  >
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-1">
     <div class="mb-6">
       <SubTitle>Conocimientos avanzados con la UCR.</SubTitle>
       <Title>C# ASP.NET Core</Title>
+      <div class="mt-4 ml-4">
+        <CSIcon class="size-6" />
+      </div>
     </div>
     <div>
       <Text
         >Desarrollo de aplicaciones de Escritorio, Web y Móviles con ASP.NET</Text
       >
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="js"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
-  >
-    <div class="mb-16">
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div class="mb-10">
       <SubTitle>Certificado con Oracle y Alura Latam.</SubTitle>
       <Title>JavaScript</Title>
+      <div class="mt-4 ml-4">
+        <JSIcon class="size-6" />
+      </div>
     </div>
     <div>
       <Text>
@@ -123,15 +139,15 @@ import Text from "./Text.astro";
         aplicaciones dinámicas.
       </Text>
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="tailwind"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
-  >
-    <div class="mb-16">
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div class="mb-10">
       <SubTitle>Autodidacta.</SubTitle>
       <Title>TailwindCSS</Title>
+      <div class="mt-4 ml-4">
+        <TailwindIcon class="size-6" />
+      </div>
     </div>
     <div>
       <Text>
@@ -140,15 +156,15 @@ import Text from "./Text.astro";
         estilizado de aplicaciones web.
       </Text>
     </div>
-  </section>
+  </SectionTech>
 
-  <section
-    id="b5"
-    class="border rounded p-2 md:col-span-2 lg:col-span-1 lg:row-span-2"
-  >
-    <div class="mb-16">
+  <SectionTech class="md:col-span-2 lg:col-span-1 lg:row-span-2">
+    <div class="mb-10">
       <SubTitle>Conocimientos avanzados con la UCR.</SubTitle>
       <Title>Bootstrap</Title>
+      <div class="mt-4 ml-4">
+        <BootsIcon class="size-6" />
+      </div>
     </div>
     <div>
       <Text>
@@ -157,12 +173,18 @@ import Text from "./Text.astro";
         SASS.
       </Text>
     </div>
-  </section>
+  </SectionTech>
 
-  <section id="py" class="border rounded p-2 md:col-span-2 lg:col-span-2">
+  <SectionTech class="md:col-span-2 lg:col-span-2">
     <div class="mb-4">
       <SubTitle>Autodidacta.</SubTitle>
-      <Title>Python</Title>
+      <div class="flex gap-2 items-center">
+        <Title>Python</Title>
+        <div class="flex ml-4 gap-8">
+          <PythonIcon class="size-6" />
+          <FlaskIcon class="size-6" />
+        </div>
+      </div>
     </div>
     <div>
       <Text>
@@ -170,5 +192,5 @@ import Text from "./Text.astro";
         Flask, aplicando buenas prácticas de programación y manejo de datos.
       </Text>
     </div>
-  </section>
+  </SectionTech>
 </main>
