@@ -19,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
     <SectionContainer class="py-28 pt-30">
       <div class="flex gap-4 mb-4">
         <img
-          class="rounded-full shadow-lg size-16"
+          class="rounded-full shadow-lg size-16 animate-fade-in"
           src="https://avatars.githubusercontent.com/u/131091082?v=4"
           alt="George Cortés"
         />
@@ -30,7 +30,9 @@ import Layout from "../layouts/Layout.astro";
           class="flex items-center transition md:justify-center md:hover:scale-105"
           download="GeorgeCortes_CV.pdf"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge class="animate-fade-in animate-delay-100"
+            >Disponible para trabajar</Badge
+          >
         </a>
       </div>
 
